@@ -1,0 +1,28 @@
+                                  Diagrama de secuencia - Ver jugadores en línea                            
+                                                                                                            
+           ┌─┐                                                                                              
+           ║"│                                                                                              
+           └┬┘                                                                                              
+           ┌┼┐                      |   ,-.                                                                 
+            │                       +--{   )               ┌───────┐           ┌─────────┐                  
+           ┌┴┐                      |   `-'                │Sistema│           │Jugadores│                  
+      Administrador            InterfMenúUsuario           └───────┘           └─────────┘                  
+            │      1 enLinea()        ┌┴┐                      │                    │                       
+            │───────────────────────> │ │                      │                    │                       
+            │                         │ │                      │                    │                       
+            │                         │ │     2 enLinea()     ┌┴┐                   │                       
+            │                         │ │ ───────────────────>│ │                   │                       
+            │                         │ │                     │ │                   │                       
+            │                         │ │                     │ │   3 enLinea()    ┌┴┐╔════════════════════╗
+            │                         │ │                     │ │ ────────────────>│ │║Contabiliza los    ░║
+            │                         │ │                     │ │                  └┬┘║jugadores en línea  ║
+            │                         └┬┘                     └┬┘                   │ ╚════════════════════╝
+            │                          │                       │ 4 confirmacion()   │                       
+            │                          │                       │<───────────────────│                       
+      Administrador            InterfMenúUsuario           ┌───────┐           ┌─────────┐                  
+           ┌─┐                      |   ,-.                │Sistema│           │Jugadores│                  
+           ║"│                      +--{   )               └───────┘           └─────────┘                  
+           └┬┘                      |   `-'                                                                 
+           ┌┼┐                                                                                              
+            │                                                                                               
+           ┌┴┐                                                                                              

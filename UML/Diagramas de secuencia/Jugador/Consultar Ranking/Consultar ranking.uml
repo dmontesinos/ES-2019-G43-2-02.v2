@@ -1,0 +1,20 @@
+@startuml
+title Diagrama de secuencia - Consultar ranking
+autonumber
+actor Jugador
+boundary InterfMenúUsuario
+control Sistema
+entity Ranking
+
+Jugador -> InterfMenúUsuario : consultarRanking()
+activate InterfMenúUsuario
+InterfMenúUsuario -> Sistema : consultarRanking()
+activate Sistema
+Sistema -> Ranking : recopilarDatosRanking()
+activate Ranking
+Ranking -> Sistema : datosRanking()
+deactivate Ranking
+deactivate Sistema
+deactivate InterfMenúUsuario
+
+@enduml

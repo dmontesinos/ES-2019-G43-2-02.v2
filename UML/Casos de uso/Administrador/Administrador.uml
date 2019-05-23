@@ -1,0 +1,11 @@
+@startuml
+:Administrador: --> (Crear mapa)
+:Administrador: --> (Crear cuenta)
+:Administrador: --> (Modificar mapa)
+:Administrador: ---> (Borrar partida de usuario)
+:Administrador: ---> (Modificar cuenta de usuario)
+:Administrador: ---> (Eliminar cuenta de usuario)
+:Administrador: --> (Modificar ranking)
+:Administrador: --> (Ver usuarios en línea)
+:Administrador: --> (Borrar juego) 
+@enduml

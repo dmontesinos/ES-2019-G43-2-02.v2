@@ -1,0 +1,56 @@
+                               ,--------------------------.                                                                                                                  
+                               |MenúUsuario               |                                                                                                                  
+                               |--------------------------|                                                                                                                  
+                               |--------------------------|                                                                                                                  
+                               |+menuMovimientos() : void |                                                                                                                  
+                               |+crearCuenta() : void     |                                                                                                                  
+                               |+crearMapa() : void       |                                                                                                                  
+                               |+crearPartida() : void    |                                                                                                                  
+                               |+consultarRanking() : void|                                                                                                                  
+                               |+continuarPartida() : void|                                                                                                                  
+                               |+comprobarDispo() : void  |                                                                                                                  
+                               |+eliminarPartida() : void |                                                                                                                  
+                               |+guardarPartida() : void  |                                                                                                                  
+                               |+modificarCuenta() : void |                                                                                                                  
+                               |+salirJuego() : void      |                                                                                                                  
+                               |-gestionarCuentas() : void|                                                                                                                  
+                               |-modificarCuenta() : void |                                                                                                                  
+                               |-modificarMapa() : void   |                                                                                                                  
+                               |-modificarRanking() : void|                                                                                                                  
+                               |-enLinea() : void         |                                                                                                                  
+                               `--------------------------'                                                                                                                  
+                                             |                                                                                                                               
+                               --------------|--------------------------------------------                                                                                   
+                               ,--------------------------.                                                                                                                  
+                               |Sistema                   |   ,--------------------------.                                                                                   
+                               |--------------------------|   |Partida                   |                                                                                   
+                               |--------------------------|   |--------------------------|                                                                                   
+                               |+crearCuenta() : void     |   |+Dificultad : int         |   ,-----------------------------------------------.                               
+,---------------------------.  |+crearMapa() : void       |   |+Personajes: personaje    |   |Jugador                                        |   ,--------------------------.
+|Ranking                    |  |+crearPartida() : void    |   |+Mapas: mapa              |   |-----------------------------------------------|   |Administrador             |
+|---------------------------|  |+consultarRanking() : void|   |+SalaActual : Sala        |   |+ID : char                                     |   |--------------------------|
+|+Position : int            |  |+continuarPartida() : void|   |--------------------------|   |+Password: char                                |   |+Accesos : string         |
+|+Nombre : char             |  |+comprobarDispo() : void  |   |+Pausa() : void           |   |+Nombre : char                                 |   |--------------------------|
+|+Puntuacion : int          |  |+eliminarPartida() : void |---|+Play(): void             |---|-----------------------------------------------|---|+Actualizar() : void      |
+|---------------------------|  |+guardarPartida() : void  |   |+AñadirMapa() : void      |   |+Login(ID : char, Password : char) : bool      |   |+GestionarCuentas() : void|
+|+VerRanking() : void       |  |+modificarCuenta() : void |   |+EliminarMapa() : void    |   |+CrearCuenta(ID : char, Password : char) : bool|   |+AdministrarJuego() : void|
+|+ActualizarRanking() : void|  |+salirJuego() : void      |   |+ContinuarPartida() : void|   |+ModificarCuenta() : void                      |   `--------------------------'
+`---------------------------'  |+gestionarCuentas() : void|   |+CrearPartida() : void    |   |+salirJuego(): void                            |                               
+                               |+modificarCuenta() : void |   |+GuardarPartida() : void  |   `-----------------------------------------------'                               
+                               |+modificarMapa() : void   |   |+EliminarPartida() : void |                                                                                   
+                               |+modificarRanking() : void|   `--------------------------'                                                                                   
+                               |+enLinea() : void         |                 |                                                                                                
+                               `--------------------------'                 |                                                                                                
+                                                                            |                                                                                                
+                                                                            |              ,------------------------.                                                        
+                                                                            |              |Sala                    |                                                        
+                                                                ,----------------------.   |------------------------|                                                        
+                                                                |Mapa                  |   |+Nombre : string        |                                                        
+                                                                |----------------------|   |+Descripcion : string   |                                                        
+                                                                |+Sala : array         |   |+Posicion : int         |                                                        
+                                                                |----------------------|---|+ID: int                |                                                        
+                                                                |+AñadirSala() : void  |   |------------------------|                                                        
+                                                                |+EliminarSala() : void|   |+MostrarPuertas() : void|                                                        
+                                                                |+GuardarMapa() : void |   |+GuardarSalas() : void  |                                                        
+                                                                `----------------------'   |+SetPosicion() : void   |                                                        
+                                                                                           `------------------------'                                                        

@@ -1,0 +1,21 @@
+@startuml
+title Diagrama de secuencia - Empezar partida
+autonumber
+actor Jugador
+boundary InterfMenúUsuario
+control Sistema
+entity Partida
+
+Jugador -> InterfMenúUsuario : crearPartida()
+activate InterfMenúUsuario
+InterfMenúUsuario -> Sistema : crearPartida()
+activate Sistema
+Sistema -> Partida : eliminarPartida()
+activate Partida
+Partida -> Sistema : confirmación()
+Sistema -> Partida : crearPartida()
+deactivate Partida
+deactivate Sistema
+deactivate InterfMenúUsuario
+
+@enduml

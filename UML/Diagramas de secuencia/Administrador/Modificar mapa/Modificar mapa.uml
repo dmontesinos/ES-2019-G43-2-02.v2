@@ -1,0 +1,33 @@
+@startuml
+title Diagrama de secuencia - Modificar mapa
+autonumber
+actor Administrador
+boundary InterfMenúUsuario
+control Sistema
+entity Mapa
+
+Administrador -> InterfMenúUsuario : modificarMapa()
+activate InterfMenúUsuario
+InterfMenúUsuario -> Sistema : modificarMapa()
+activate Sistema
+Sistema -> Mapa : AñadirSala()
+activate Mapa
+Mapa -[#red]> Sistema : confirmacion()
+note right 
+Comprueba que la sala 
+no está añadida
+previamente y devuelve 
+True o False
+end note
+
+deactivate Mapa
+deactivate Sistema
+deactivate InterfMenúUsuario
+
+alt SalaYaAñadida
+Mapa -[#green]> Sistema : confirmacion()
+Sistema -[#green]> InterfMenúUsuario : error()
+InterfMenúUsuario -[#green]> Administrador : error()
+end
+
+@enduml

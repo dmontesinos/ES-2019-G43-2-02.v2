@@ -1,0 +1,124 @@
+% @author Lluis Gesa (lluis.gesa@uab.cat)
+%
+% Enginyeria Del Software
+% -----------------------------------------------------------------------------------
+
+
+
+% definim quin estil general volem per el document
+\documentclass[11pt]{article}
+
+% indiquem quins paquets amb funcionalitat extra volem fer servir
+\usepackage{a4wide, amsmath, tabularx, colortbl, fancyhdr, graphicx, lastpage, caption}
+\usepackage[utf8]{inputenc}
+
+% Indiquem que comencem a definir el document i els seus continguts.
+\begin{document}
+
+% Definim valors i propietats, creem macros que ens ajudaran a
+% agilitzar coses repetides:
+
+\newcommand{\NomProjecte}{Perdidos en la ignorancia}
+\newcommand{\NomDocument}{Estado}
+\newcommand{\IdentificadorDocument}{GG-SL-N-UC}
+\newcommand{\VersioDocument}{v1.0}
+
+% Fent servir propietas del paquet fancyhdr per crear una capçalera
+% que es mostrarà cada pàgina
+\pagestyle{fancy}
+\fancyhead[LO,LE]{\includegraphics[width = 3.5cm]{./imatges/uab-logo.png}}
+\fancyhead[CO,CE]{\bf \NomProjecte \\ \vspace{\baselineskip}
+  \NomDocument }
+\fancyhead[RO,RE]{
+{\bf Ref : \IdentificadorDocument} \\
+Versió: \VersioDocument\\
+Data: \today \\
+Pag. \thepage ~of \pageref{LastPage}
+}
+\fancyfoot[LO,LE,CO,CE,RO,RE]{}
+\textheight=19cm
+
+
+%
+% Creem la pàgina inicial :
+
+% Insertem el nom del document en una taula centrada feng servir una
+% font gran \huge
+
+\begin{center}
+\begin{tabular*}{15cm}{p{14.5cm}}
+\\
+\\
+\\
+\rowcolor[gray]{.9}\begin{center}\huge{\bf{\NomDocument}}\end{center}\\
+\\
+\end{tabular*}
+\end{center}
+
+
+%
+% Insertem una taula que contindrà les abreviacions que hi hagi al
+% nostre document
+%
+\small{%
+\begin{center}
+\begin{tabular}{|p{2cm}|p{4.75cm}|p{2cm}|p{4.75cm}|}
+\hline
+\multicolumn{4}{|>{\columncolor[gray]{.9}[2mm][2mm]}c|}{{\bf Abreviatures}} \\
+\hline
+UAB & Universitat Autonoma de Barcelona & ES & Enginyeria del Software \\
+\hline
+& & & \\
+\hline
+\end{tabular}
+\end{center}
+}
+
+%
+% Insertem una taula amb el historial de canvis del document
+%
+\small{%
+\begin{center}
+\begin{tabular}{|p{2cm}|p{2cm}|p{7.5cm}|p{2cm}|}
+\hline
+\multicolumn{4}{|>{\columncolor[gray]{.9}[2mm][2mm]}c|}{{\bf Historial de Revisions}} \\
+\hline
+{\bf Version} & {\bf Date} & {\bf Comments} & {\bf Autor} \\
+\hline
+1.0 & 08-Abril-2019 & Sprint 3 &
+G43-2-02 \\
+
+\hline
+\end{tabular}
+\end{center}
+}
+
+
+
+
+% Insertem en una nova pàgina, els indexs : de continguts, de figures
+% i de taules, les comandes \tableofcontents ,  \listoffigures,
+% \listoftables són gestionades per els paquets fets servir, i per
+% defecte escriuen els titols de la secció en angles, per canviar-los,
+% hem de 'renovar les comandes' :
+
+\renewcommand{\contentsname}{Índex de continguts}
+\renewcommand{\listfigurename}{Índex de figures}
+\renewcommand{\listtablename}{Índex de taules}
+
+% Ara li diem al LaTeX que inserti la informació
+\newpage
+\tableofcontents
+\listoffigures
+\listoftables
+
+% Insertem les seccions que volem
+\newpage
+
+\include{introduccio}
+\include{est}
+
+% \include{matriu}
+
+% Finalitzem el document.
+\end{document}

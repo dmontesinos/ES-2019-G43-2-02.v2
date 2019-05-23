@@ -1,0 +1,21 @@
+@startuml
+
+state "Juego en ejecución" as JuegoEnEjecucion
+state "Partida anterior guardada" as PartidaGuardada
+state "Partida nueva" as PartidaNueva
+state "Partida en curso" as PartidaEnCurso
+state "Tiempo acabado" as TiempoAcabado
+state "Salir del juego" as SalirDelJuego
+state "Actualizar ranking" as Actualizar
+
+[*] --> JuegoEnEjecucion
+JuegoEnEjecucion -left-> PartidaGuardada : continuarPartida()
+JuegoEnEjecucion -right-> PartidaNueva : crearPartida()
+PartidaGuardada --> PartidaEnCurso : //Ejecución de la partida
+PartidaNueva --> PartidaEnCurso
+PartidaEnCurso -right-> TiempoAcabado : //Fin de la partida
+TiempoAcabado --> Actualizar
+Actualizar --> PartidaNueva : crearPartida()
+PartidaEnCurso --> SalirDelJuego
+SalirDelJuego --> [*] : salirJuego()
+@enduml

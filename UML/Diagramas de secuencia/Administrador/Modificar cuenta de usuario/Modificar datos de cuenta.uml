@@ -1,0 +1,41 @@
+@startuml
+title Diagrama de secuencia - Modificar datos de cuenta
+autonumber
+actor Administrador
+boundary InterfMenúUsuario
+control Sistema
+entity Jugador
+
+Administrador -> InterfMenúUsuario : modificarCuenta()
+activate InterfMenúUsuario
+InterfMenúUsuario -> Sistema : modificarCuenta()
+activate Sistema
+Sistema -> Jugador : modificarCuenta()
+activate Jugador
+Jugador -[#red]> Sistema : confirmacion()
+note right 
+El sistema recoge 
+los datos recibidos
+y los añade 
+sustituyendo los 
+anteriores
+end note
+
+
+deactivate Jugador
+deactivate Sistema
+deactivate InterfMenúUsuario
+alt NoPermitido
+Jugador -[#green]> Sistema : confirmacion()
+Sistema -[#green]> InterfMenúUsuario : error()
+note right 
+En caso de no
+tener permisos
+para un apartado
+específico,
+devuelve el error
+end note
+InterfMenúUsuario -[#green]> Administrador : error()
+end
+
+@enduml

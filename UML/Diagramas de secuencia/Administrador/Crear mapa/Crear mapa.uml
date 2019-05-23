@@ -1,0 +1,35 @@
+@startuml
+title Diagrama de secuencia - Crear mapa
+autonumber
+actor Administrador
+boundary InterfMenúUsuario
+control Sistema
+entity Mapa
+
+Administrador -> InterfMenúUsuario : crearMapa()
+activate InterfMenúUsuario
+InterfMenúUsuario -> Sistema : crearMapa()
+activate Sistema
+Sistema -> Mapa : AñadirSala()
+activate Mapa
+Mapa -[#red]> Sistema : confirmacion()
+note right 
+Se añaden las
+salas al mapa
+y retorna la
+confirmación
+end note
+
+
+
+deactivate Mapa
+deactivate Sistema
+deactivate InterfMenúUsuario
+alt MapaYaExistente
+Mapa -[#green]> Sistema : confirmacion()
+Sistema -[#green]> InterfMenúUsuario : error()
+InterfMenúUsuario -[#green]> Administrador : error()
+end
+
+@enduml
+

@@ -1,0 +1,127 @@
+@startuml
+title Classes - Class Diagram
+
+'------------------------------------------------------------------------
+' PACKAGE Personas
+'------------------------------------------------------------------------
+Package Personas {
+class Jugador <<entity>> {
+    +ID : char
+    +Password: char
+    +Nombre : char
+    +Login(ID : char, Password : char) : bool
+    +CrearCuenta(ID : char, Password : char) : bool
+    +ModificarCuenta() : void
+    +salirJuego(): void
+}
+
+Jugador <|- Administrador
+
+class Administrador <<entity>>{
+    +Accesos : string
+    +Actualizar() : void
+    +GestionarCuentas() : void
+    +AdministrarJuego() : void
+}
+}
+'------------------------------------------------------------------------
+' PACKAGE ArtefactosJuego
+'------------------------------------------------------------------------
+Package ArtefactosJuego {
+class Partida <<entity>>{
+  +Dificultad : int
+  +Personajes: personaje
+  +Mapas: mapa
+  +SalaActual : Sala
+  +Pausa() : void
+  +Play(): void
+  +AñadirMapa() : void
+  +EliminarMapa() : void
+  +ContinuarPartida() : void
+  +CrearPartida() : void
+  +GuardarPartida() : void
+  +EliminarPartida() : void
+}
+
+Partida "1" <-- "1" Mapa
+
+class Mapa <<entity>>{
+    +Sala : array
+    +AñadirSala() : void
+    +EliminarSala() : void
+    +GuardarMapa() : void
+}
+
+left to right direction
+Mapa "1" <- "1..." Sala
+
+class Sala <<entity>>{
+    +Nombre : string
+    +Descripcion : string
+    +Posicion : int
+    +ID: int
+    +MostrarPuertas() : void
+    +GuardarSalas() : void
+    +SetPosicion() : void
+}
+
+Partida "0..." <- "1" Jugador
+
+
+Ranking "1"-->"0..." Partida
+Ranking "1"->"0..." Jugador
+
+class Ranking <<entity>>{
+    +Position : int
+    +Nombre : char
+    +Puntuacion : int
+    +VerRanking() : void
+    +ActualizarRanking() : void
+}
+
+class Sistema <<control>>{
+    +crearCuenta() : void
+    +crearMapa() : void
+    +crearPartida() : void
+    +consultarRanking() : void
+    +continuarPartida() : void
+    +comprobarDispo() : void
+    +eliminarPartida() : void
+    +guardarPartida() : void
+    +modificarCuenta() : void
+    +salirJuego() : void
+    +gestionarCuentas() : void
+    +modificarCuenta() : void
+    +modificarMapa() : void
+    +modificarRanking() : void
+    +enLinea() : void
+}
+Sistema "1" -> "1" Partida
+}
+'------------------------------------------------------------------------
+' PACKAGE Interfaces
+'------------------------------------------------------------------------
+Package Interfaces {
+MenúUsuario "1"--"1" Sistema
+class MenúUsuario <<boundary>>{
+    +menuMovimientos() : void
+    +crearCuenta() : void
+    +crearMapa() : void
+    +crearPartida() : void
+    +consultarRanking() : void
+    +continuarPartida() : void
+    +comprobarDispo() : void
+    +eliminarPartida() : void
+    +guardarPartida() : void
+    +modificarCuenta() : void
+    +salirJuego() : void
+    -gestionarCuentas() : void
+    -modificarCuenta() : void
+    -modificarMapa() : void
+    -modificarRanking() : void
+    -enLinea() : void
+    }
+}
+
+
+@enduml

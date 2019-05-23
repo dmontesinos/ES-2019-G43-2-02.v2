@@ -1,0 +1,25 @@
+@startuml
+title Diagrama de secuencia - Ver jugadores en línea
+autonumber
+actor Administrador
+boundary InterfMenúUsuario
+control Sistema
+entity Jugadores
+
+Administrador -> InterfMenúUsuario : enLinea()
+activate InterfMenúUsuario
+InterfMenúUsuario -> Sistema : enLinea()
+activate Sistema
+Sistema -> Jugadores : enLinea()
+note right 
+Contabiliza los
+jugadores en línea
+end note
+activate Jugadores
+Jugadores -[#red]> Sistema : confirmacion()
+
+deactivate Jugadores
+deactivate Sistema
+deactivate InterfMenúUsuario
+
+@enduml

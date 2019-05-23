@@ -1,0 +1,29 @@
+                                                                                                                                    
+                               ------------------------                                                                             
+                               ,----------------------.   ,-----------------------------------------.                               
+                               |Partida               |   |Jugador                                  |                               
+,---------------------------.  |----------------------|   |-----------------------------------------|   ,--------------------------.
+|Ranking                    |  |+Dificultad : int     |   |+ID : char                               |   |Administrador             |
+|---------------------------|  |+Personajes: personaje|   |+Password: char                          |   |--------------------------|
+|+Position : int            |  |+Mapas: mapa          |   |+Nombre : char                           |   |+Accesos : string         |
+|+Nombre : char             |  |+SalaActual : Sala    |   |-----------------------------------------|   |--------------------------|
+|+Puntuacion : int          |--|----------------------|---|+Login(ID : char, Password : char) : bool|---|+Actualizar() : void      |
+|---------------------------|  |+Pausa() : void       |   |+EditProfile() : void                    |   |+GestionarCuentas() : void|
+|+VerRanking() : void       |  |+Play(): void         |   |+Continue() : void                       |   |+AdministrarJuego() : void|
+|+ActualizarRanking() : void|  |+AñadirMapa() : void  |   |+CrearPartida() : void                   |   `--------------------------'
+`---------------------------'  |+EliminarMapa() : void|   |+GuardarPartida() : void                 |                               
+                               `----------------------'   |+EliminarPartida() : void                |                               
+                                           |              `-----------------------------------------'                               
+                                           |                                                                                        
+                                           |              ,------------------------.                                                
+                                                          |Sala                    |                                                
+                               ,----------------------.   |------------------------|                                                
+                               |Mapa                  |   |+Nombre : string        |                                                
+                               |----------------------|   |+Descripcion : string   |                                                
+                               |+Sala : array         |   |+Posicion : int         |                                                
+                               |----------------------|---|+ID: int                |                                                
+                               |+AñadirSala() : void  |   |------------------------|                                                
+                               |+EliminarSala() : void|   |+MostrarPuertas() : void|                                                
+                               |+GuardarMapa() : void |   |+GuardarSalas() : void  |                                                
+                               `----------------------'   |+SetPosicion() : void   |                                                
+                                                          `------------------------'                                                

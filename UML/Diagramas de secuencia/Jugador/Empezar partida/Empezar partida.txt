@@ -1,0 +1,30 @@
+                         Diagrama de secuencia - Empezar partida                    
+                                                                                    
+        ┌─┐                                                                         
+        ║"│                                                                         
+        └┬┘                                                                         
+        ┌┼┐                   |   ,-.                                               
+         │                    +--{   )               ┌───────┐             ┌───────┐
+        ┌┴┐                   |   `-'                │Sistema│             │Partida│
+      Jugador            InterfMenúUsuario           └───────┘             └───────┘
+         │  1 crearPartida()    ┌┴┐                      │                     │    
+         │────────────────────> │ │                      │                     │    
+         │                      │ │                      │                     │    
+         │                      │ │  2 crearPartida()   ┌┴┐                    │    
+         │                      │ │ ───────────────────>│ │                    │    
+         │                      │ │                     │ │                    │    
+         │                      │ │                     │ │3 eliminarPartida()┌┴┐   
+         │                      │ │                     │ │ ─────────────────>│ │   
+         │                      │ │                     │ │                   │ │   
+         │                      │ │                     │ │ 4 confirmación()  │ │   
+         │                      │ │                     │ │ <─────────────────│ │   
+         │                      └┬┘                     └┬┘                   └┬┘   
+         │                       │                       │  5 crearPartida()   │    
+         │                       │                       │────────────────────>│    
+      Jugador            InterfMenúUsuario           ┌───────┐             ┌───────┐
+        ┌─┐                   |   ,-.                │Sistema│             │Partida│
+        ║"│                   +--{   )               └───────┘             └───────┘
+        └┬┘                   |   `-'                                               
+        ┌┼┐                                                                         
+         │                                                                          
+        ┌┴┐                                                                         

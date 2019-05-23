@@ -1,0 +1,157 @@
+\section{Clases}\label{sec:uc0}
+\subsection{Clase : Jugador}\label{sec:uc0}
+\subsubsection{Atributos}
+\begin{enumerate}
+\item ID : char
+\item Password : char
+\item Nombre : char
+\end{enumerate}
+
+\subsubsection{Métodos}
+\begin{enumerate}
+\item Login(ID : char, Password : char) : bool
+\item CrearCuenta(ID : char, Password : char) : bool
+\item ModificarCuenta() : void
+\item SalirJuego() : void
+\end{enumerate}
+
+
+
+\subsection{Clase : Administrador}\label{sec:uc0}
+\subsubsection{Atributos}
+\begin{enumerate}
+\item Accesos : string
+\end{enumerate}
+
+\subsubsection{Métodos}
+\begin{enumerate}
+\item Actualizar() : void
+\item GestionarCuentas() : void
+\item AdministrarJuego() : void
+\end{enumerate}
+
+
+
+\subsection{Clase : Ranking}\label{sec:uc0}
+\subsubsection{Atributos}
+\begin{enumerate}
+\item Position : int
+\item Nombre : char
+\item Puntuacion : int
+\end{enumerate}
+
+\subsubsection{Métodos}
+\begin{enumerate}
+\item VerRanking() : void
+\item ActualizarRanking() : void
+\end{enumerate}
+
+
+
+
+\subsection{Clase : Mapa}\label{sec:uc0}
+\subsubsection{Atributos}
+\begin{enumerate}
+\item Sala : array
+\end{enumerate}
+
+\subsubsection{Métodos}
+\begin{enumerate}
+\item AñadirSala() : void
+\item EliminarSala() : void
+\item GuardarMapa() : void
+\end{enumerate}
+
+
+
+
+\subsection{Clase : Sala}\label{sec:uc0}
+\subsubsection{Atributos}
+\begin{enumerate}
+\item Nombre : string
+\item Descripcion : string
+\item Posicion : int
+\item ID: int
+\end{enumerate}
+
+\subsubsection{Métodos}
+\begin{enumerate}
+\item MostrarPuertas() : void
+\item GuardarSalas() : void
+\item SetPosicion() : void
+\end{enumerate}
+
+
+
+
+\subsection{Clase : Partida}\label{sec:uc0}
+\subsubsection{Atributos}
+\begin{enumerate}
+\item Dificultad : int
+\item Personajes: personaje
+\item Mapas: mapa
+\item SalaActual : Sala
+\end{enumerate}
+
+\subsubsection{Métodos}
+\begin{enumerate}
+\item Pausa() : void
+\item Play(): void
+\item AñadirMapa() : void
+\item EliminarMapa() : void
+\item ContinuarPartida() : void
+\item CrearPartida() : void
+\item GuardarPartida() : void
+\item EliminarPartida() : void
+\end{enumerate}
+
+
+
+
+\subsection{Clase : Sistema}\label{sec:uc0}
+\subsubsection{Métodos}
+\begin{enumerate}
+\item crearCuenta() : void
+\item crearMapa() : void
+\item crearPartida() : void
+\item consultarRanking() : void
+\item continuarPartida() : void
+\item comprobarDispo() : void
+\item eliminarPartida() : void
+\item guardarPartida() : void
+\item modificarCuenta() : void
+\item salirJuego() : void
+\item gestionarCuentas() : void
+\item modificarCuenta() : void
+\item modificarMapa() : void
+\item modificarRanking() : void
+\item enLinea() : void
+\end{enumerate}
+
+
+
+
+\subsection{Clase : MenúUsuario}\label{sec:uc0}
+\subsubsection{Métodos}
+\begin{enumerate}
+\item menuMovimientos() : void
+\item crearCuenta() : void
+\item crearMapa() : void
+\item crearPartida() : void
+\item consultarRanking() : void
+\item continuarPartida() : void
+\item comprobarDispo() : void
+\item eliminarPartida() : void
+\item guardarPartida() : void
+\item modificarCuenta() : void
+\item salirJuego() : void
+\item gestionarCuentas() : void
+\item modificarCuenta() : void
+\item modificarMapa() : void
+\item modificarRanking() : void
+\item enLinea() : void
+\end{enumerate}
+
+
+
+

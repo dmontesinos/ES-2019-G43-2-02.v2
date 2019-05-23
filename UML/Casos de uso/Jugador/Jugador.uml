@@ -1,0 +1,12 @@
+@startuml
+:Jugador: --> (Crear cuenta)
+:Jugador: --> (Modificar datos cuenta)
+:Jugador: --> (Hacer login)
+:Jugador: ---> (Empezar partida)
+:Jugador: ---> (Continuar partida)
+:Jugador: ---> (Borrar su partida)
+:Jugador: --> (Consultar ranking)
+:Jugador: ---> (Guardar partida)
+:Jugador: --> (Salir del juego)
+:Jugador: ---> (Ver menú de movimientos)
+@enduml

@@ -1,0 +1,75 @@
+@startuml
+
+title Classes - Class Diagram
+
+class Partida {
+  +Dificultad : int
+  +Personajes: personaje
+  +Mapas: mapa
+  +SalaActual : Sala
+  +Pausa() : void
+  +Play(): void
+  +AñadirMapa() : void
+  +EliminarMapa() : void
+}
+
+Partida "1" <-- "1" Mapa
+
+class Mapa {
+    +Sala : array
+    +AñadirSala() : void
+    +EliminarSala() : void
+    +GuardarMapa() : void
+}
+
+left to right direction
+Mapa "1" <- "1..." Sala
+
+class Sala {
+    +Nombre : string
+    +Descripcion : string
+    +Posicion : int
+    +ID: int
+    +MostrarPuertas() : void
+    +GuardarSalas() : void
+    +SetPosicion() : void
+}
+
+Partida "0..." <- "1" Jugador
+
+class Jugador {
+    +ID : char
+    +Password: char
+    +Nombre : char
+    +Login(ID : char, Password : char) : bool
+    +CrearCuenta(ID : char, Password : char) : bool
+    +ModificarCuenta() : void
+    +ContinuarPartida() : void
+    +CrearPartida() : void
+    +GuardarPartida() : void
+    +EliminarPartida() : void
+    +MenuMovimientos() : void
+    +SalirJuego(): void
+}
+
+Ranking "1"-->"0..." Partida
+Ranking "1"->"0..." Jugador
+
+class Ranking {
+    +Position : int
+    +Nombre : char
+    +Puntuacion : int
+    +VerRanking() : void
+    +ActualizarRanking() : void
+}
+
+Jugador <|- Administrador
+
+class Administrador {
+    +Accesos : string
+    +Actualizar() : void
+    +GestionarCuentas() : void
+    +AdministrarJuego() : void
+}
+
+@enduml

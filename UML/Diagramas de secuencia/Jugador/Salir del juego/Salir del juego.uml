@@ -1,0 +1,20 @@
+@startuml
+title Diagrama de secuencia - Salir del juego
+autonumber
+actor Jugador
+boundary InterfMenúUsuario
+control Sistema
+entity entity_Jugador
+
+Jugador -> InterfMenúUsuario : SalirJuego()
+activate InterfMenúUsuario
+InterfMenúUsuario -> Sistema : SalirJuego()
+activate Sistema
+Sistema -> entity_Jugador : guardarDatos()
+activate entity_Jugador
+entity_Jugador -> Sistema : confirmación()
+deactivate entity_Jugador
+deactivate Sistema
+deactivate InterfMenúUsuario
+
+@enduml

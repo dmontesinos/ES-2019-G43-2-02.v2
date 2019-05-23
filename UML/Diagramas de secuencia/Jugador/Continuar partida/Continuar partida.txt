@@ -1,0 +1,27 @@
+                       Diagrama de secuencia - Continuar partida                   
+                                                                                   
+        ┌─┐                                                                        
+        ║"│                                                                        
+        └┬┘                                                                        
+        ┌┼┐                   |   ,-.                                              
+         │                    +--{   )               ┌───────┐            ┌───────┐
+        ┌┴┐                   |   `-'                │Sistema│            │Partida│
+      Jugador            InterfMenúUsuario           └───────┘            └───────┘
+         │1 continuarPartida()  ┌┴┐                      │                    │    
+         │────────────────────> │ │                      │                    │    
+         │                      │ │                      │                    │    
+         │                      │ │2 continuarPartida() ┌┴┐                   │    
+         │                      │ │ ───────────────────>│ │                   │    
+         │                      │ │                     │ │                   │    
+         │                      │ │                     │ │3 comprobarDispo()┌┴┐   
+         │                      │ │                     │ │ ────────────────>│ │   
+         │                      └┬┘                     └┬┘                  └┬┘   
+         │                       │                       │ 4 datosPartida()   │    
+         │                       │                       │<───────────────────│    
+      Jugador            InterfMenúUsuario           ┌───────┐            ┌───────┐
+        ┌─┐                   |   ,-.                │Sistema│            │Partida│
+        ║"│                   +--{   )               └───────┘            └───────┘
+        └┬┘                   |   `-'                                              
+        ┌┼┐                                                                        
+         │                                                                         
+        ┌┴┐                                                                        

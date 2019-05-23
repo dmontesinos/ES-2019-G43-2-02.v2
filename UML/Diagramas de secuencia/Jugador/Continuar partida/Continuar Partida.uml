@@ -1,0 +1,20 @@
+@startuml
+title Diagrama de secuencia - Continuar partida
+autonumber
+actor Jugador
+boundary InterfMenúUsuario
+control Sistema
+entity Partida
+
+Jugador -> InterfMenúUsuario : continuarPartida()
+activate InterfMenúUsuario
+InterfMenúUsuario -> Sistema : continuarPartida()
+activate Sistema
+Sistema -> Partida : comprobarDispo()
+activate Partida
+Partida -> Sistema : datosPartida()
+deactivate Partida
+deactivate Sistema
+deactivate InterfMenúUsuario
+
+@enduml

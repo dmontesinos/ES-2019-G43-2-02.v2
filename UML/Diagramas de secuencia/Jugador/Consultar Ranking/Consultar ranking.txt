@@ -1,0 +1,27 @@
+                           Diagrama de secuencia - Consultar ranking                      
+                                                                                          
+        ┌─┐                                                                               
+        ║"│                                                                               
+        └┬┘                                                                               
+        ┌┼┐                   |   ,-.                                                     
+         │                    +--{   )               ┌───────┐                   ┌───────┐
+        ┌┴┐                   |   `-'                │Sistema│                   │Ranking│
+      Jugador            InterfMenúUsuario           └───────┘                   └───────┘
+         │1 consultarRanking()  ┌┴┐                      │                           │    
+         │────────────────────> │ │                      │                           │    
+         │                      │ │                      │                           │    
+         │                      │ │2 consultarRanking() ┌┴┐                          │    
+         │                      │ │ ───────────────────>│ │                          │    
+         │                      │ │                     │ │                          │    
+         │                      │ │                     │ │3 recopilarDatosRanking()┌┴┐   
+         │                      │ │                     │ │ ───────────────────────>│ │   
+         │                      └┬┘                     └┬┘                         └┬┘   
+         │                       │                       │     4 datosRanking()      │    
+         │                       │                       │<──────────────────────────│    
+      Jugador            InterfMenúUsuario           ┌───────┐                   ┌───────┐
+        ┌─┐                   |   ,-.                │Sistema│                   │Ranking│
+        ║"│                   +--{   )               └───────┘                   └───────┘
+        └┬┘                   |   `-'                                                     
+        ┌┼┐                                                                               
+         │                                                                                
+        ┌┴┐                                                                               

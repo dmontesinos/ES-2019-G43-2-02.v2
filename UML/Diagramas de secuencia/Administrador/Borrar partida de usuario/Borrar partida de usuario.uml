@@ -1,0 +1,32 @@
+@startuml
+title Diagrama de secuencia - Borrar partida de usuario
+autonumber
+actor Administrador
+boundary InterfMenúUsuario
+control Sistema
+entity Jugador
+
+Administrador -> InterfMenúUsuario : eliminarPartida()
+activate InterfMenúUsuario
+InterfMenúUsuario -> Sistema : eliminarPartida()
+activate Sistema
+Sistema -> Jugador : eliminarPartida()
+activate Jugador
+Jugador -[#red]> Sistema : confirmacion()
+note right 
+Comprueba que existe
+la partida y devuelve
+True o False
+end note
+
+deactivate Jugador
+deactivate Sistema
+deactivate InterfMenúUsuario
+
+alt NoExistePartida
+Jugador -[#green]> Sistema : confirmacion()
+Sistema -[#green]> InterfMenúUsuario : error()
+InterfMenúUsuario -[#green]> Administrador : error()
+end
+
+@enduml

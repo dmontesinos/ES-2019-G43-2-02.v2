@@ -1,0 +1,27 @@
+                             Diagrama de secuencia - Hacer login                         
+                                                                                         
+        ┌─┐                                                                              
+        ║"│                                                                              
+        └┬┘                                                                              
+        ┌┼┐                   |   ,-.                                                    
+         │                    +--{   )               ┌───────┐           ┌──────────────┐
+        ┌┴┐                   |   `-'                │Sistema│           │entity_jugador│
+      Jugador            InterfMenúUsuario           └───────┘           └──────────────┘
+         │     1 Login()        ┌┴┐                      │                      │        
+         │────────────────────> │ │                      │                      │        
+         │                      │ │                      │                      │        
+         │                      │ │ 2 comprobarDispo()  ┌┴┐                     │        
+         │                      │ │ ───────────────────>│ │                     │        
+         │                      │ │                     │ │                     │        
+         │                      │ │                     │ │3 realizarConsulta()┌┴┐       
+         │                      │ │                     │ │ ──────────────────>│ │       
+         │                      └┬┘                     └┬┘                    └┬┘       
+         │                       │                       │  4 confirmación()    │        
+         │                       │                       │<─────────────────────│        
+      Jugador            InterfMenúUsuario           ┌───────┐           ┌──────────────┐
+        ┌─┐                   |   ,-.                │Sistema│           │entity_jugador│
+        ║"│                   +--{   )               └───────┘           └──────────────┘
+        └┬┘                   |   `-'                                                    
+        ┌┼┐                                                                              
+         │                                                                               
+        ┌┴┐                                                                              

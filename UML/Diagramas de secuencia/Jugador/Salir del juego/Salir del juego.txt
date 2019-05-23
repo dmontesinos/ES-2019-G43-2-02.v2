@@ -1,0 +1,27 @@
+                           Diagrama de secuencia - Salir del juego                      
+                                                                                        
+        ┌─┐                                                                             
+        ║"│                                                                             
+        └┬┘                                                                             
+        ┌┼┐                   |   ,-.                                                   
+         │                    +--{   )               ┌───────┐          ┌──────────────┐
+        ┌┴┐                   |   `-'                │Sistema│          │entity_Jugador│
+      Jugador            InterfMenúUsuario           └───────┘          └──────────────┘
+         │   1 SalirJuego()     ┌┴┐                      │                     │        
+         │────────────────────> │ │                      │                     │        
+         │                      │ │                      │                     │        
+         │                      │ │   2 SalirJuego()    ┌┴┐                    │        
+         │                      │ │ ───────────────────>│ │                    │        
+         │                      │ │                     │ │                    │        
+         │                      │ │                     │ │ 3 guardarDatos()  ┌┴┐       
+         │                      │ │                     │ │ ─────────────────>│ │       
+         │                      └┬┘                     └┬┘                   └┬┘       
+         │                       │                       │  4 confirmación()   │        
+         │                       │                       │<────────────────────│        
+      Jugador            InterfMenúUsuario           ┌───────┐          ┌──────────────┐
+        ┌─┐                   |   ,-.                │Sistema│          │entity_Jugador│
+        ║"│                   +--{   )               └───────┘          └──────────────┘
+        └┬┘                   |   `-'                                                   
+        ┌┼┐                                                                             
+         │                                                                              
+        ┌┴┐                                                                             

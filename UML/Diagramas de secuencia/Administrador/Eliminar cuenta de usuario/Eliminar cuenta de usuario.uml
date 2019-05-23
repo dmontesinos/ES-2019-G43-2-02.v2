@@ -1,0 +1,40 @@
+@startuml
+title Diagrama de secuencia - Eliminar cuenta de usuario
+autonumber
+actor Administrador
+boundary InterfMenúUsuario
+control Sistema
+entity Jugador
+
+Administrador -> InterfMenúUsuario : gestionarCuentas()
+activate InterfMenúUsuario
+InterfMenúUsuario -> Sistema : gestionarCuentas()
+activate Sistema
+Sistema -> Jugador : eliminarCuenta()
+activate Jugador
+Jugador -[#red]> Sistema : confirmacion()
+note right 
+Se comprueba
+si la cuenta
+existe o no
+end note
+
+
+deactivate Jugador
+deactivate Sistema
+deactivate InterfMenúUsuario
+alt NoPermitido/NoExiste
+Jugador -[#green]> Sistema : confirmacion()
+Sistema -[#green]> InterfMenúUsuario : error()
+note right 
+En caso de no
+tener permisos
+para un apartado
+específico, o no
+existir devuelve 
+el error
+end note
+InterfMenúUsuario -[#green]> Administrador : error()
+end
+
+@enduml

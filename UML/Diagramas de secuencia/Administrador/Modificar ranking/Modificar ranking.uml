@@ -1,0 +1,45 @@
+@startuml
+title Diagrama de secuencia - Modificar ranking
+autonumber
+actor Administrador
+boundary InterfMenúUsuario
+control Sistema
+entity Ranking
+
+Administrador -> InterfMenúUsuario : modificarRanking()
+activate InterfMenúUsuario
+InterfMenúUsuario -> Sistema : modificarRanking()
+activate Sistema
+Sistema -> Ranking : modificarRanking()
+note right 
+Se devuelven
+los datos del
+ranking para
+modificarlos
+end note
+activate Ranking
+Ranking -[#red]> Sistema : confirmacion()
+Sistema -[#red]> InterfMenúUsuario : datosRanking()
+InterfMenúUsuario -[#red]> Administrador : datosRanking()
+Administrador -> InterfMenúUsuario : modificarRanking()
+InterfMenúUsuario -> Sistema : modificarRanking()
+Sistema -> Ranking : insertarDatos()
+
+deactivate Ranking
+deactivate Sistema
+deactivate InterfMenúUsuario
+alt NoPermitido/NoExiste
+Ranking -[#green]> Sistema : confirmacion()
+Sistema -[#green]> InterfMenúUsuario : error()
+note right 
+En caso de no
+tener permisos
+para un apartado
+específico, o no
+existir devuelve 
+el error
+end note
+InterfMenúUsuario -[#green]> Administrador : error()
+end
+
+@enduml

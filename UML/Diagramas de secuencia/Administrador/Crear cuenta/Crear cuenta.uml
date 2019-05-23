@@ -1,0 +1,34 @@
+@startuml
+title Diagrama de secuencia - Crear una cuenta
+autonumber
+actor Administrador
+boundary InterfMenúUsuario
+control Sistema
+entity entity_Jugador
+
+Administrador -> InterfMenúUsuario : CrearCuenta()
+activate InterfMenúUsuario
+InterfMenúUsuario -> Sistema : comprobarDispo()
+activate Sistema
+Sistema -> entity_Jugador : realizarConsulta()
+activate entity_Jugador
+entity_Jugador -[#red]> Sistema : confirmacion()
+note right 
+Comprueba que el usuario 
+no existe y devuelve 
+True o False
+end note
+
+Administrador -> InterfMenúUsuario : datosRegistro()
+InterfMenúUsuario -> Sistema : datosRegistro()
+Sistema -> entity_Jugador : realizarRegistro()
+deactivate entity_Jugador
+deactivate Sistema
+deactivate InterfMenúUsuario
+alt UsuarioExiste
+entity_Jugador -[#green]> Sistema : confirmacion()
+Sistema -[#green]> InterfMenúUsuario : error()
+InterfMenúUsuario -[#green]> Administrador : error()
+end
+
+@enduml

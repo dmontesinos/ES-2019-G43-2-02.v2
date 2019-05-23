@@ -1,0 +1,20 @@
+@startuml
+title Diagrama de secuencia - Hacer login
+autonumber
+actor Jugador
+boundary InterfMenúUsuario
+control Sistema
+entity entity_jugador
+
+Jugador -> InterfMenúUsuario : Login()
+activate InterfMenúUsuario
+InterfMenúUsuario -> Sistema : comprobarDispo()
+activate Sistema
+Sistema -> entity_jugador : realizarConsulta()
+activate entity_jugador
+entity_jugador -> Sistema : confirmación()
+deactivate entity_jugador
+deactivate Sistema
+deactivate InterfMenúUsuario
+
+@enduml

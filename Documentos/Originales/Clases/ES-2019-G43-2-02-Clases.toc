@@ -1,0 +1,21 @@
+\contentsline {section}{\numberline {1}Introducci\IeC {\'o}}{3}% 
+\contentsline {section}{\numberline {2}Diagrama de clases}{4}% 
+\contentsline {section}{\numberline {3}Clases}{5}% 
+\contentsline {subsection}{\numberline {3.1}Clase : Jugador}{5}% 
+\contentsline {subsubsection}{\numberline {3.1.1}Atributos}{5}% 
+\contentsline {subsubsection}{\numberline {3.1.2}M\IeC {\'e}todos}{5}% 
+\contentsline {subsection}{\numberline {3.2}Clase : Administrador}{5}% 
+\contentsline {subsubsection}{\numberline {3.2.1}Atributos}{5}% 
+\contentsline {subsubsection}{\numberline {3.2.2}M\IeC {\'e}todos}{5}% 
+\contentsline {subsection}{\numberline {3.3}Clase : Ranking}{5}% 
+\contentsline {subsubsection}{\numberline {3.3.1}Atributos}{5}% 
+\contentsline {subsubsection}{\numberline {3.3.2}M\IeC {\'e}todos}{6}% 
+\contentsline {subsection}{\numberline {3.4}Clase : Mapa}{6}% 
+\contentsline {subsubsection}{\numberline {3.4.1}Atributos}{6}% 
+\contentsline {subsubsection}{\numberline {3.4.2}M\IeC {\'e}todos}{6}% 
+\contentsline {subsection}{\numberline {3.5}Clase : Sala}{6}% 
+\contentsline {subsubsection}{\numberline {3.5.1}Atributos}{6}% 
+\contentsline {subsubsection}{\numberline {3.5.2}M\IeC {\'e}todos}{6}% 
+\contentsline {subsection}{\numberline {3.6}Clase : Partida}{6}% 
+\contentsline {subsubsection}{\numberline {3.6.1}Atributos}{6}% 
+\contentsline {subsubsection}{\numberline {3.6.2}M\IeC {\'e}todos}{7}% 
