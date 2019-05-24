@@ -1,0 +1,42 @@
+\section{TP-02 : Login}\label{sect:TP1}
+
+En aquest Test Procedure verificarem tots els escenaris possibles
+relacionat amb el login del nostre sistema.
+
+
+\TPStep{01}{Inicia del sistema}{El sistema arranca amb una base de
+dades amb un usuari \textit{new\_user} de password \textit{CXX965}! i un administrador de password \textbf{admin1}}{Sistema
+arrancat correctament, sense errors}{}
+
+\TPStep{02}{Login d'usuari valid amb password invalid : Username}{S’accedeix al
+login del sistema, quan es demana username, s’introdueix
+usuari: \textit{new\_user}}{El sistema demana el password}{}
+
+\TPStep{03}{Login d'usuari valid amb password invalid :
+Password}{S’introdueix el password invalid : \textit{CXX965D!}}{El
+sistema no valida l'usuari:
+\begin{itemize}
+\item  El sistema mostra un missatge d'error
+\item A la base de dades s'incrementa el contador de logins fallats
+del perfil del usuari :  \textit{new\_user}
+\end{itemize}
+}{}
+
+\TPStep{04}{Login d'usuari valid amb password invalid: Control de
+repeticions}{Saltem al step 02 i es repeteix la seqüència 3 cops}{
+\begin{itemize}
+\item  El sistema mostra un missatge d'error indicant que el usuari
+està bloquejat
+\item A la base de dades el perfil de \textit{new\_user}  queda marcat com bloquejat
+\item El sistema envia un email l'administrador indicant
+que \textit{new\_user} està bloquejat
+\end{itemize}
+}{}
+
+\TPStep{05}{Login d'usuari bloquejat : Username}{S’accedeix al
+login del sistema, quan es demana username, s’introdueix
+usuari: \textit{new\_user}}{El sistema indica que aquell usuari està bloquejat}{}
+
+
+\TPStep{06}{...}{...}{...}{...}
+\TPStep{07}{...}{...}{...}{...}

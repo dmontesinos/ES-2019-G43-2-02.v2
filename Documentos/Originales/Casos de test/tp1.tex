@@ -1,0 +1,38 @@
+\section{TP-01 : Registre}\label{sect:TP1}
+
+En aquest Test Procedure verificarem tots els escenaris possibles
+relacionat amb el registre de nous perfils al nostre sistema,
+certificarem que es factible registrar nous usuaris,així com verificar
+els límits relacionats amb el tamany i format de usernames i passwords.
+
+
+\TPStep{01}{Inicia del sistema}{El sistema arranca amb una base de
+dades buida sense cap usuari, unicament un administrador de password \textbf{admin1}}{Sistema
+arrancat correctament, sense errors}{}
+
+\TPStep{02}{Registre Nou usuari : Username}{S’accedeix al registre del
+sistema, quan es demana username, s’introdueix un nom d’usuari nou: \textit{new\_user}}{El sistema detecta que l’usuari no existeix i demana si es vol crear}{}
+
+\TPStep{03}{Registre Nou usuari : Password}{S’introdueix un password
+valid : \textit{CXX965}!}{El sistema valida el password i crea el
+perfil:
+\begin{itemize}
+\item A la base de dades hi ha el perfil nou
+\item  El sistema mostra un missatge de benvinguda
+\end{itemize}
+}{}
+
+\TPStep{04}{Registre Nou usuari : Username repetit}{S’accedeix al
+registre del sistema, quan es demana username, s’introdueix un nom
+d’usuari nou: \textit{new\_user}}{El sistema detecta que l’usuari existeix
+i mostra error per pantalla}{}
+
+
+\TPStep{05}{Registre Nou usuari : Username invalid}{S’accedeix al
+registre del sistema, quan es demana username, s’introdueix un nom
+d’usuari nou: \textit{aa}}{El sistema detecta que el nom d'usuari no te
+prous lletres i mostra missatge d'error}{}
+
+
+\TPStep{06}{...}{...}{...}{...}
+\TPStep{07}{...}{...}{...}{...}
