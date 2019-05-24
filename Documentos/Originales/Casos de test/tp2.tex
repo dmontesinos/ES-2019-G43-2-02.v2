@@ -1,42 +1,42 @@
-\section{TP-02 : Login}\label{sect:TP1}
+\section{TP-02 : Inicio de sesión}\label{sect:TP1}
 
-En aquest Test Procedure verificarem tots els escenaris possibles
-relacionat amb el login del nostre sistema.
+En el siguiente caso de test se muestran los posibles inputs y outputs al realizar el login del usuario.
 
 
-\TPStep{01}{Inicia del sistema}{El sistema arranca amb una base de
-dades amb un usuari \textit{new\_user} de password \textit{CXX965}! i un administrador de password \textbf{admin1}}{Sistema
-arrancat correctament, sense errors}{}
+\TPStep{01}{Inicia del sistema}{El sistema se inicia sin ningún usuario por defecto. Previamente se debe haber creado manualmente en la base de datos con el usuario:contraseña root:toor}{El sistema arranca sin problemas}{}
 
-\TPStep{02}{Login d'usuari valid amb password invalid : Username}{S’accedeix al
-login del sistema, quan es demana username, s’introdueix
-usuari: \textit{new\_user}}{El sistema demana el password}{}
+\TPStep{02}{Inicio de sesión válido con contraseña válida : Usuario}{Se accede al login del sistema y se pide los datos de usuario: \textit{new\_user}}{El sistema pide la contraseña}{}
 
-\TPStep{03}{Login d'usuari valid amb password invalid :
-Password}{S’introdueix el password invalid : \textit{CXX965D!}}{El
-sistema no valida l'usuari:
+\TPStep{03}{Inicio de sesión válido con contraseña válida : Contraseña: Contraseña}{Se introduce la contraseña válida : \textit{CXX965D!}}{El sistema valida al usuario:
 \begin{itemize}
-\item  El sistema mostra un missatge d'error
-\item A la base de dades s'incrementa el contador de logins fallats
-del perfil del usuari :  \textit{new\_user}
+\item  Redirige al usuario a su panel principal
+
 \end{itemize}
 }{}
 
-\TPStep{04}{Login d'usuari valid amb password invalid: Control de
-repeticions}{Saltem al step 02 i es repeteix la seqüència 3 cops}{
+\TPStep{04}{Inicio de sesión inválido con usuario inválido : Usuario}{Se introduce un usuario que no existe en la base de datos : \textit{inventado!}}{
 \begin{itemize}
-\item  El sistema mostra un missatge d'error indicant que el usuari
-està bloquejat
-\item A la base de dades el perfil de \textit{new\_user}  queda marcat com bloquejat
-\item El sistema envia un email l'administrador indicant
-que \textit{new\_user} està bloquejat
+\item  El sistema comprueba en la base de datos y determina que no existe
+\item Se devuelve un mensaje al usuario con el error
 \end{itemize}
 }{}
 
-\TPStep{05}{Login d'usuari bloquejat : Username}{S’accedeix al
-login del sistema, quan es demana username, s’introdueix
-usuari: \textit{new\_user}}{El sistema indica que aquell usuari està bloquejat}{}
+\TPStep{06}{Inicio de sesión inválido con contraseña inválida : Contraseña}{Se introduce un usuario y una contraseña que no coincide con la cuenta}{
+\begin{itemize}
+\item  El sistema comprueba en la base de datos y determina que no coincide el login con la contraseña
+\item Se devuelve un mensaje al usuario con el error
+\end{itemize}
+}{}
 
+\TPStep{07}{Inicio de sesión inválido con contraseña inválida: Control de
+repeticiones}{Volvemos al paso 6 y lo repetimos 3 veces}{
+\begin{itemize}
+\item  El sistema va contando los inicios incorrectos y determina que debe bloquear el usuario por precaución
+\item Envía al usuario un mensaje de que su cuenta ha quedado bloqueada por actividad sospechosa
+\item Se envía un mensaje al administrador para que tome las medidas necesarias
+\end{itemize}
+}{}
 
-\TPStep{06}{...}{...}{...}{...}
-\TPStep{07}{...}{...}{...}{...}
+\TPStep{08}{Inicio de sesión inválido con usuario bloqueado: Control de
+repeticiones}{Se accede al registro y se determina que la cuenta introducida por el usuario está bloqueada}{El sistema devuelve al usuario un mensaje de error mostrándole los motivos}{}
+

@@ -1,38 +1,22 @@
-\section{TP-01 : Registre}\label{sect:TP1}
+\section{TP-01 : Registro}\label{sect:TP1}
 
-En aquest Test Procedure verificarem tots els escenaris possibles
-relacionat amb el registre de nous perfils al nostre sistema,
-certificarem que es factible registrar nous usuaris,així com verificar
-els límits relacionats amb el tamany i format de usernames i passwords.
+En este test probaremos todos los posibles escenarios que puedan darse al registrar nuevos usuarios en el sistema, comprobando tanto el login como la contraseña, con diversos tamaños, caracteres y combinaciones.
 
 
-\TPStep{01}{Inicia del sistema}{El sistema arranca amb una base de
-dades buida sense cap usuari, unicament un administrador de password \textbf{admin1}}{Sistema
-arrancat correctament, sense errors}{}
+\TPStep{01}{Inicia del sistema}{El sistema se inicia sin ningún usuario por defecto. Previamente se debe haber creado manualmente en la base de datos con el usuario:contraseña root:toor}{El sistema arranca sin problemas}{}
 
-\TPStep{02}{Registre Nou usuari : Username}{S’accedeix al registre del
-sistema, quan es demana username, s’introdueix un nom d’usuari nou: \textit{new\_user}}{El sistema detecta que l’usuari no existeix i demana si es vol crear}{}
+\TPStep{02}{Registro de nuevo usuario: Username}{Se accede al registro del sistema y cuando se pide el login se introduce un nombre de usuario nuevo: \textit{new\_user}}{El sistema detecta que no existe y crea el nuevo usuario}{}
 
-\TPStep{03}{Registre Nou usuari : Password}{S’introdueix un password
-valid : \textit{CXX965}!}{El sistema valida el password i crea el
-perfil:
+\TPStep{03}{Registro de nuevo usuario: Password}{Se introduce una contraseña válida : \textit{86HJ9}!}{El sistema valida la contraseña y crea el nuevo perfil:
 \begin{itemize}
-\item A la base de dades hi ha el perfil nou
-\item  El sistema mostra un missatge de benvinguda
+\item Crea una nueva entrada en la base de datos con el usuario
+\item  El sistema da la bienvenida al usuario y lo redirige
 \end{itemize}
 }{}
 
-\TPStep{04}{Registre Nou usuari : Username repetit}{S’accedeix al
-registre del sistema, quan es demana username, s’introdueix un nom
-d’usuari nou: \textit{new\_user}}{El sistema detecta que l’usuari existeix
-i mostra error per pantalla}{}
+\TPStep{04}{Registro de nuevo usuario: Username ya existente}{Se accede al registro del sistema y se ingresa un usuario ya existente: \textit{new\_user}}{El sistema detecta que dicho usuario ya existe y retorna el error al usuario para que lo modifique}{}
 
 
-\TPStep{05}{Registre Nou usuari : Username invalid}{S’accedeix al
-registre del sistema, quan es demana username, s’introdueix un nom
-d’usuari nou: \textit{aa}}{El sistema detecta que el nom d'usuari no te
-prous lletres i mostra missatge d'error}{}
+\TPStep{05}{Registro de nuevo usuario: Usuario inválido}{Se accede al registro del sistema y se ingresa un usuario que no cumple con las directivas que se muestran en pantalla: \textit{aa}}{El sistema detecta que no cumple con los requisitos necesarios y muestra el error al usuario}{}
 
-
-\TPStep{06}{...}{...}{...}{...}
-\TPStep{07}{...}{...}{...}{...}
+\TPStep{06}{Registro de nuevo usuario: Contraseña inválida}{Se accede al registro del sistema y se ingresa una contraseña que no cumple con las directivas que se muestran en pantalla: \textit{pass}}{El sistema detecta que no cumple con los requisitos necesarios y muestra el error al usuario}{}
