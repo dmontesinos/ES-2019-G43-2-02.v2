@@ -10,10 +10,8 @@ Jugador -> InterfMenúUsuario : crearPartida()
 activate InterfMenúUsuario
 InterfMenúUsuario -> Sistema : crearPartida()
 activate Sistema
-Sistema -> Partida : eliminarPartida()
-activate Partida
-Partida -> Sistema : confirmación()
 Sistema -> Partida : crearPartida()
+activate Partida
 deactivate Partida
 deactivate Sistema
 deactivate InterfMenúUsuario
