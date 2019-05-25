@@ -1,0 +1,38 @@
+\section{TP-05 : Modificar contraseña}\label{sect:TP1}
+
+En el siguiente test se mostrarán las diversas pruebas aplicadas a la modificación de la contraseña de usuario.
+
+
+\TPStep{01}{Cambio de contraseña válido}{Se ingresa la contraseña actual por motivos de seguridad y se ingresa la nueva contraseña dos veces}
+{
+\begin{itemize}
+\item El sistema comprueba que la contraseña antigua es correcta
+\item El sistema comprueba que la contraseña nueva cumple con los requisitos mínimos
+\item El sistema comprueba que la contraseña nueva coincide en ambos campos
+\item El sistema cambia la contraseña antigua por la nueva
+\item El sistema envía un mensaje de confirmación al usuario
+\end{itemize}}{}
+
+\TPStep{02}{Cambio de contraseña inválido : Contraseña antigua incorrecta}{Se ingresa la contraseña actual por motivos de seguridad y se ingresa la nueva contraseña dos veces}
+{
+\begin{itemize}
+\item El sistema comprueba que la contraseña antigua es incorrecta
+\item El sistema envía un mensaje de error al usuario
+\end{itemize}}{}
+
+\TPStep{03}{Cambio de contraseña inválido : Contraseña nueva no cumple con requisitos mínimos}{Se ingresa la contraseña actual por motivos de seguridad y se ingresa la nueva contraseña dos veces}
+{
+\begin{itemize}
+\item El sistema comprueba que la contraseña antigua es correcta
+\item El sistema comprueba que la contraseña nueva cumple con los requisitos mínimos y detecta el error
+\item El sistema envía un mensaje de error al usuario
+\end{itemize}}{}
+
+\TPStep{04}{Cambio de contraseña inválido : Contraseña nueva no coincide}{Se ingresa la contraseña actual por motivos de seguridad y se ingresa la nueva contraseña dos veces}
+{
+\begin{itemize}
+\item El sistema comprueba que la contraseña antigua es correcta
+\item El sistema comprueba que la contraseña nueva cumple con los requisitos mínimos
+\item El sistema comprueba que ambas contraseñas nuevas coinciden y detecta el error
+\item El sistema envía un mensaje de error al usuario
+\end{itemize}}{}

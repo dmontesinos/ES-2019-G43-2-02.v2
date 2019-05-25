@@ -1,0 +1,20 @@
+\section{TP-07 : Guardado manual}\label{sect:TP1}
+
+En el siguiente test se mostrarán las diversas pruebas aplicadas para ver si el guardado manual del usuario funciona correctamente
+
+
+\TPStep{01}{Guardado manual válido}{Se comienza una partida y en un momento dado se decide guardarla manualmente}
+{
+\begin{itemize}
+\item El sistema recibe la petición y guarda todos los datos necesarios de la partida, para posteriormente retomarla
+\item Se retoma la partida y continua en el punto esperado y con las propiedades esperadas
+
+\end{itemize}}{}
+
+\TPStep{02}{Guardado manual inválido}{Se comienza una partida y en un momento dado se decide guardarla manualmente}
+{
+\begin{itemize}
+\item El sistema recibe la petición y guarda todos los datos necesarios de la partida, para posteriormente retomarla
+\item Se retoma la partida pero no comienza por el punto esperado ni con las propiedades de la partida esperadas
+\item Se devuelve el error 
+\end{itemize}}{}

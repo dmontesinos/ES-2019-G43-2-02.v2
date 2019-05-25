@@ -1,0 +1,19 @@
+\section{TP-04 : Borrar partida}\label{sect:TP1}
+
+En el siguiente test se mostrarán las diversas pruebas aplicadas a la eliminación de partidas de usuario.
+
+
+\TPStep{01}{Eliminar partida de usuario válida}{Se busca y se selecciona la partida a borrar}
+{
+\begin{itemize}
+\item  El sistema recibe la petición de eliminación de la partida y busca en la base de datos su existencia
+\item El sistema encuentra la partida y procede a borrar todas sus entradas
+\item El sistema devuelve al usuario un mensaje de confirmación
+\end{itemize}}{}
+
+\TPStep{02}{Eliminar partida de usuario inválida}{Se busca y se selecciona la partida a borrar}
+{
+\begin{itemize}
+\item  El sistema recibe la petición de eliminación de la partida y busca en la base de datos su existencia
+\item El sistema devuelve al usuario un mensaje con el pertinente error
+\end{itemize}}{}

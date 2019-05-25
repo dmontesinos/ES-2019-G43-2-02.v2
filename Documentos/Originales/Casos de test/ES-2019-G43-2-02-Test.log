@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.3.25)  24 MAY 2019 23:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.3.25)  25 MAY 2019 19:47
 entering extended mode
 **./ES-2019-G43-2-02-Test.tex
 (ES-2019-G43-2-02-Test.tex
@@ -201,6 +201,26 @@ Package: inputenc 2018/08/11 v1.3c Input encoding file
 
 LaTeX Warning: Label `sect:TP1' multiply defined.
 
+) (tp3.aux
+
+LaTeX Warning: Label `sect:TP1' multiply defined.
+
+) (tp4.aux
+
+LaTeX Warning: Label `sect:TP1' multiply defined.
+
+) (tp5.aux
+
+LaTeX Warning: Label `sect:TP1' multiply defined.
+
+) (tp6.aux
+
+LaTeX Warning: Label `sect:TP1' multiply defined.
+
+) (tp7.aux
+
+LaTeX Warning: Label `sect:TP1' multiply defined.
+
 ))
 \openout1 = `ES-2019-G43-2-02-Test.aux'.
 
@@ -332,7 +352,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--89
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 108--108
-[]|\OT1/cmr/m/n/10 24-Mayo-
+[]|\OT1/cmr/m/n/10 27-Mayo-
  []
 
 <./imatges/uab-logo.png, id=1, 351.3125pt x 250.9375pt>
@@ -409,18 +429,80 @@ File: ./imatges/uab-logo.png Graphic file (type png)
 <use ./imatges/uab-logo.png>
 Package pdftex.def Info: ./imatges/uab-logo.png  used on input line 139.
 (pdftex.def)             Requested size: 99.58464pt x 71.1312pt.
- [7] 
+ [7]
+\openout2 = `tp3.aux'.
+
+ (tp3.tex)
+File: ./imatges/uab-logo.png Graphic file (type png)
+<use ./imatges/uab-logo.png>
+Package pdftex.def Info: ./imatges/uab-logo.png  used on input line 140.
+(pdftex.def)             Requested size: 99.58464pt x 71.1312pt.
+ [8
+
+
+]
+\openout2 = `tp4.aux'.
+
+ (tp4.tex)
+File: ./imatges/uab-logo.png Graphic file (type png)
+<use ./imatges/uab-logo.png>
+Package pdftex.def Info: ./imatges/uab-logo.png  used on input line 141.
+(pdftex.def)             Requested size: 99.58464pt x 71.1312pt.
+ [9
+
+
+]
+\openout2 = `tp5.aux'.
+
+ (tp5.tex
+File: ./imatges/uab-logo.png Graphic file (type png)
+<use ./imatges/uab-logo.png>
+Package pdftex.def Info: ./imatges/uab-logo.png  used on input line 38.
+(pdftex.def)             Requested size: 99.58464pt x 71.1312pt.
+ [10
+
+
+])
+File: ./imatges/uab-logo.png Graphic file (type png)
+<use ./imatges/uab-logo.png>
+Package pdftex.def Info: ./imatges/uab-logo.png  used on input line 142.
+(pdftex.def)             Requested size: 99.58464pt x 71.1312pt.
+ [11]
+\openout2 = `tp6.aux'.
+
+
+(tp6.tex)
+File: ./imatges/uab-logo.png Graphic file (type png)
+<use ./imatges/uab-logo.png>
+Package pdftex.def Info: ./imatges/uab-logo.png  used on input line 143.
+(pdftex.def)             Requested size: 99.58464pt x 71.1312pt.
+ [12
+
+
+]
+\openout2 = `tp7.aux'.
+
+ (tp7.tex)
+File: ./imatges/uab-logo.png Graphic file (type png)
+<use ./imatges/uab-logo.png>
+Package pdftex.def Info: ./imatges/uab-logo.png  used on input line 144.
+(pdftex.def)             Requested size: 99.58464pt x 71.1312pt.
+ [13
+
+
+] 
 AED: lastpage setting LastPage
-(ES-2019-G43-2-02-Test.aux (introduccio.aux) (tp1.aux) (tp2.aux))
+(ES-2019-G43-2-02-Test.aux (introduccio.aux) (tp1.aux) (tp2.aux) (tp3.aux)
+(tp4.aux) (tp5.aux) (tp6.aux) (tp7.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3627 strings out of 492945
- 57266 string characters out of 3126252
- 136575 words of memory out of 3000000
- 7443 multiletter control sequences out of 15000+200000
+ 3667 strings out of 492945
+ 58991 string characters out of 3126252
+ 138067 words of memory out of 3000000
+ 7448 multiletter control sequences out of 15000+200000
  9680 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,15n,65p,494b,381s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -430,9 +512,9 @@ blic/amsfonts/cm/cmbx12.pfb><C:/Users/danib/AppData/Local/Programs/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/danib/AppData/Local/Programs/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/danib/AppData/Lo
 cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on ES-2019-G43-2-02-Test.pdf (7 pages, 107798 bytes).
+Output written on ES-2019-G43-2-02-Test.pdf (13 pages, 123408 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
+ 68 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

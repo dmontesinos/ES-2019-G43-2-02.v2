@@ -1,0 +1,25 @@
+\section{TP-03 : Eliminar cuentas}\label{sect:TP1}
+
+En el siguiente test se mostrarán las diversas pruebas aplicadas a la eliminación de cuentas de usuario.
+
+
+\TPStep{01}{Eliminar cuenta de usuario válido}{Se busca y selecciona en la base de datos el usuario que desea eliminar}
+{
+\begin{itemize}
+\item  El sistema recibe la selección y procede a buscar y eliminar las entradas de la base de datos correspondientes a este usuario
+\item El sistema devuelve al administrador un mensaje de confirmación
+\end{itemize}}{}
+
+\TPStep{02}{Eliminar cuenta de usuario inválido}{Se busca y selecciona en la base de datos el usuario que desea eliminar}
+{
+\begin{itemize}
+\item  El sistema recibe la selección y procede a buscar y eliminar las entradas de la base de datos correspondientes, pero no encuentra ninguna con dicho usuario
+\item El sistema devuelve al administrador un mensaje con el pertinente error
+\end{itemize}}{}
+
+\TPStep{03}{Eliminar cuenta de usuario sin permisos suficientes}{Se busca y selecciona en la base de datos el usuario que desea eliminar}
+{
+\begin{itemize}
+\item  El sistema recibe la selección y procede a buscar y eliminar las entradas de la base de datos correspondientes, pero al intentar borrarlo detecta que el usuario no tiene suficientes permisos
+\item El sistema devuelve al administrador un mensaje con el pertinente error
+\end{itemize}}{}
