@@ -1,0 +1,20 @@
+\section{TP-06 : Estados de los usuarios}\label{sect:TP1}
+
+En el siguiente test se mostrarán las diversas pruebas aplicadas a ver si los usuarios están conectados o no
+
+
+\TPStep{01}{Comprobación de estado válida}{Se loguearán en el sistema 10 usuarios de muestra y se comprobará cuántos usuarios hay conectados}
+{
+\begin{itemize}
+\item El sistema comprueba todas las cuentas en línea y las contabiliza
+\item El sistema devuelve el número correcto de usuarios
+\item El número de usuarios devuelto por el sistema, coincide con el número de usuarios logueados previamente 
+\end{itemize}}{}
+
+\TPStep{02}{Comprobación de estado inválida}{Se loguearán en el sistema 10 usuarios de muestra y se comprobará cuántos usuarios hay conectados}
+{
+\begin{itemize}
+\item El sistema comprueba todas las cuentas en línea y las contabiliza
+\item El sistema devuelve el número de usuarios conectados
+\item El número de usuarios conectados no coincide con el devuelto por el sistema y, por tanto, es erróneo
+\end{itemize}}{}
