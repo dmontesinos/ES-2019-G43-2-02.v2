@@ -1,4 +1,4 @@
 \contentsline {section}{\numberline {1}Introducci\IeC {\'o}}{3}% 
 \contentsline {section}{\numberline {2}Requeriments Funcionals}{4}% 
-\contentsline {section}{\numberline {3}Requeriments No Funcionals}{9}% 
-\contentsline {section}{\numberline {4}Tra\IeC {\c c}abilitat}{10}% 
+\contentsline {section}{\numberline {3}Requeriments No Funcionals}{10}% 
+\contentsline {section}{\numberline {4}Tra\IeC {\c c}abilitat}{11}% 
