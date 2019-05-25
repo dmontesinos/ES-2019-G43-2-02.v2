@@ -10,7 +10,7 @@
 
 \frame{\titlepage}
 
-\frame{\frametitle{Table of contents}\tableofcontents}
+{\tiny \frame{\frametitle{Table of contents}\tableofcontents}}
 
 
 \section{Membres del equip}
@@ -26,13 +26,16 @@
 
 
 \section{Jira}
-\subsection{Product Backlog/Tasques}
-\frame{\frametitle{Product Backlog}
-\includegraphics[width=1\textwidth]{./imatges/ProductBacklog2.png}
-}
-
+%\subsection{Product Backlog/Tasques}
+%\frame{\frametitle{Product Backlog}
+%\includegraphics[width=1\textwidth]{./imatges/ProductBacklog2.png}
+%}
+\subsection{Tasques}
 \frame{\frametitle{Tasques}
-\includegraphics[width=1\textwidth]{./imatges/tareas2.png}
+\begin{center}
+	\includegraphics[width=1\textwidth]{./imatges/tareas4.png}
+\end{center}
+	
 }
 
 \subsection{Burndown chart}
@@ -40,44 +43,111 @@
 
   \begin{figure}[ht]
   \centering
-  \includegraphics[width=1\textwidth]{./imatges/burndown2.png}
+  \includegraphics[width=1\textwidth]{./imatges/burndown4.png}
   \label{fig:bdchart}
 \end{figure}
-
 }
+
 
 \section{Bitbucket}
 \frame{\frametitle{Bitbucket}
 \begin{center}
-	\includegraphics[width=0.8\textwidth]{./imatges/bitbucket2.png}
+	\begin{figure}
+ \centering
+  \subfloat{
+    \includegraphics[width=0.5\textwidth]{./imatges/bitbucket41.png}}
+  \subfloat{
+    \includegraphics[width=0.45\textwidth]{./imatges/bitbucket42.png}}
+\end{figure}
 \end{center}
 }
 
 
-\section{Classes}
-\frame{\frametitle{Classes}
+\section{Test}
+\frame{\frametitle{Test - Eliminar cuentas}
 \begin{center}
-	\includegraphics[width=0.8\textwidth]{./imatges/Clases.png}
+	\includegraphics[width=0.6\textwidth]{./imatges/test.png}
 \end{center}
 }
 
 
-\section{Diagrama de Classes}
-\frame{\frametitle{Diagrama de Classes}
+\section{Sprint Review}
+\subsection{Requerimientos}
+\frame{\frametitle{Requerimientos}
 \begin{center}
-	\includegraphics[width=0.8\textwidth]{./imatges/DiagramaClases.png}
+	\includegraphics[width=0.6\textwidth]{./imatges/requeriments4.png}
 \end{center}
 }
 
+\subsection{Diagrama de Casos de Uso}
+\frame{\frametitle{Diagrama de Casos de Uso - Administrador}
+\begin{center}
+	\includegraphics[width=1\textwidth]{./imatges/cu_Administrador4.png}
+\end{center}
+}
 
-\section{Conclusions}
-\frame{\frametitle{Conclusions}
+\frame{\frametitle{Diagrama de Casos de Uso - Jugador}
+\begin{center}
+	\includegraphics[width=1\textwidth]{./imatges/cu_Jugador4.png}
+\end{center}
+}
+
+\subsection{Diagrama de Clases}
+\frame{\frametitle{Diagrama de Clases}
+\begin{center}
+	\includegraphics[width=0.8\textwidth]{./imatges/Diagrama_Clases_v4.png}
+\end{center}
+}
+
+\subsection{Diagrama de Secuencia}
+\frame{\frametitle{Diagrama de Secuencia - Administrador}
+\begin{center}
+	\includegraphics[width=0.7\textwidth]{./imatges/Modificar_mapa.png}
+\end{center}
+}
+
+\frame{\frametitle{Diagrama de Secuencia - Jugador}
+\begin{center}
+	\includegraphics[width=0.6\textwidth]{./imatges/Crear_una_cuenta.png}
+\end{center}
+}
+
+\subsection{Diagrama de Estado}
+\frame{\frametitle{Diagrama de Estado - Estados del juego}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{./imatges/de_Estados_juego.png}
+\end{center}
+}
+
+\frame{\frametitle{Diagrama de Estado - Partida}
+\begin{center}
+	\includegraphics[width=0.55\textwidth]{./imatges/de_Partida.png}
+\end{center}
+}
+
+\subsection{Evolución}
+\frame{\frametitle{Evolución}
+\begin{center}
+	\includegraphics[width=0.7\textwidth]{./imatges/evolucion.png}
+\end{center}
+}
+
+\section{Perdidos en la ignorancia}
+\frame{\frametitle{Perdidos en la ignorancia}
+\begin{center}
+	\includegraphics[width=0.6\textwidth]{./imatges/logo.png}
+\end{center}
+}
+
+\section{Conclusiones}
+\frame{\frametitle{Conclusiones}
 \begin{enumerate}
-\item Hemos mejorado la intuición de la duración de las tareas.
-\item Hemos modificado los errores del anterior sprint.
-\item Mejor organización, trabajo progresivo.
+	\item Hemos trabajado de manera constante.
+	\item Hemos modificado errores de sprints anteriores.
+\end{enumerate}}
 
-\end{enumerate}
-}
+
+
+
 
 \end{document}
