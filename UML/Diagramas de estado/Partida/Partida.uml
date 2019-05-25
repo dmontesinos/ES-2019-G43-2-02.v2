@@ -1,0 +1,22 @@
+@startuml
+
+state "Juego en ejecución" as JuegoEnEjecucion
+state "Entrar en una sala" as EntrarEnSala
+state "Lograr resolver puzzle" as Resolver
+state "TimeOut/No lograr resolver puzzle" as NoResolver
+state "Fin del juego" as FinDelJuego
+state "Salir del juego" as SalirDelJuego
+
+[*] --> JuegoEnEjecucion
+JuegoEnEjecucion --> EntrarEnSala : menuMovimientos()
+EntrarEnSala -left-> Resolver : //Éxito
+Resolver --> EntrarEnSala : //Nuevo nivel
+EntrarEnSala -right-> NoResolver : //Fracaso
+NoResolver --> FinDelJuego
+FinDelJuego -> EntrarEnSala
+FinDelJuego -down-> SalirDelJuego
+
+
+
+SalirDelJuego --> [*] : salirJuego()
+@enduml
