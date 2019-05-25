@@ -80,23 +80,20 @@ Para borrar una partida, desde el administrador se llama a la función eliminarP
   Para crear una cuenta el Jugador accede a la Interfície del Menú del Usuario a partir de la función CrearCuenta(), esta comprueba la disponibilidad al Sistema y se realiza la consulta a la Entidad del Jugador, donde se verifica si la cuenta ya existe o no y retorna True o False al Sistema a través de la confirmación.
   \\Si la cuenta no existe, el Jugador envía los datos del Registro hacia el Sistema a través de la Interfície del Menú del Usuario. Finalmente, el Sistema realiza el Registro.
   \\Si la cuenta ya existía previamente, el Sistema envía un error al Jugador pasando por la Interfície del Menú del Usuario.
+  
 \subsubsection{Eliminar partida}
 \begin{center}
   \includegraphics[width=0.9\textwidth]{./imatges/jugador/Eliminar_partida.png}
   \end{center}
   Cuando queremos eliminar una cuenta, el Jugador llama a la función eliminarPartida() hasta Partida, pasando por la Interfície del Menú del Usuario y el Sistema. A continuación se elimina y se envía una confirmación al Sistema.
   \\Si la partida no existía, posteriormente de la confirmación, se envía un error hasta el Jugador a través de la Interfície del Menú del Usuario.
-  
-
+ 
 \subsubsection{Empezar partida}
 \begin{center}
   \includegraphics[width=0.9\textwidth]{./imatges/jugador/Empezar_partida.png}
   \end{center}
-  A continuación se muestra el diagrama de secuencia para empezar una partida, en este caso, el Jugador accede a la función crearPartida() hasta el Sistema pasando por la Interfície del Menú del Usuario. El sistema llega a Partida mediante eliminarPartida
+  A continuación se muestra el diagrama de secuencia para empezar una partida, en este caso, el Jugador accede a la función crearPartida() hasta llegar a Partida, pasando por la Interfície del Menú del Usuario y el Sistema.
   
-CAMBIAR
-  
-
 \subsubsection{Guardar partida}
 \begin{center}
   \includegraphics[width=0.9\textwidth]{./imatges/jugador/Guardar_partida.png}
