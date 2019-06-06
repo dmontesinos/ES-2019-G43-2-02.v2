@@ -9,14 +9,14 @@ state "Salir del juego" as SalirDelJuego
 
 [*] --> JuegoEnEjecucion
 JuegoEnEjecucion --> EntrarEnSala : menuMovimientos()
-EntrarEnSala -left-> Resolver : //Éxito
-Resolver --> EntrarEnSala : //Nuevo nivel
-EntrarEnSala -right-> NoResolver : //Fracaso
-NoResolver --> FinDelJuego
-FinDelJuego -> EntrarEnSala
-FinDelJuego -down-> SalirDelJuego
+EntrarEnSala -left-> Resolver
+Resolver --> EntrarEnSala
+EntrarEnSala -right-> NoResolver : EliminarPartida()
+NoResolver --> FinDelJuego : EliminarPartida()
+FinDelJuego -> EntrarEnSala : CrearPartida()
+FinDelJuego -down-> SalirDelJuego : salirJuego()
 
 
 
-SalirDelJuego --> [*] : salirJuego()
+SalirDelJuego --> [*]
 @enduml

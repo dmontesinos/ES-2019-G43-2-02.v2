@@ -11,10 +11,10 @@ state "Actualizar ranking" as Actualizar
 [*] --> JuegoEnEjecucion
 JuegoEnEjecucion -left-> PartidaGuardada : continuarPartida()
 JuegoEnEjecucion -right-> PartidaNueva : crearPartida()
-PartidaGuardada --> PartidaEnCurso : //Ejecución de la partida
-PartidaNueva --> PartidaEnCurso
-PartidaEnCurso -right-> TiempoAcabado : //Fin de la partida
-TiempoAcabado --> Actualizar
+PartidaGuardada --> PartidaEnCurso : Play()
+PartidaNueva --> PartidaEnCurso : Play()
+PartidaEnCurso -right-> TiempoAcabado 
+TiempoAcabado --> Actualizar : ActualizarRanking()
 Actualizar --> PartidaNueva : crearPartida()
 PartidaEnCurso --> SalirDelJuego
 SalirDelJuego --> [*] : salirJuego()
