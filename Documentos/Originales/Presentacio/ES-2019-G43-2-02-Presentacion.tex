@@ -2,6 +2,10 @@
 \usepackage{beamerthemesplit} % new
 
 \usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
 
 \begin{document}
 \title{Perdidos en la ignorancia}
@@ -51,15 +55,35 @@
 
 \section{Bitbucket}
 \frame{\frametitle{Bitbucket}
+%\begin{center}
+%	\begin{figure}
+ %\centering
+  %\subfloat{
+   % \includegraphics[width=0.5\textwidth]{./imatges/bitbucket41.png}}
+  %\subfloat{
+   % \includegraphics[width=0.45\textwidth]{./imatges/bitbucket42.png}}
+%\end{figure}
+
+
+%\end{center}
+
+
+
 \begin{center}
 	\begin{figure}
- \centering
-  \subfloat{
-    \includegraphics[width=0.5\textwidth]{./imatges/bitbucket41.png}}
-  \subfloat{
-    \includegraphics[width=0.45\textwidth]{./imatges/bitbucket42.png}}
+  \begin{subfigure}{0.49\textwidth}
+    \includegraphics[width=1\textwidth]{./imatges/bitbucket41.png}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.49\textwidth}
+    \includegraphics[width=1\textwidth]{./imatges/bitbucket42.png}
+  \end{subfigure}
+
 \end{figure}
 \end{center}
+
+
+
 }
 
 
@@ -134,25 +158,35 @@
 
 \frame{\frametitle{Evolución - Burndown Chart}
 \begin{center}
+
 	\begin{figure}
-		\centering
-			\subfloat{
-			\includegraphics[width=0.5\textwidth]{./imatges/S1.png}}
-			\subfloat{
-			\includegraphics[width=0.5\textwidth]{./imatges/S2.png}}
-	\end{figure}
+
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=1\textwidth]{./imatges/S1.png}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=1\textwidth]{./imatges/S2.png}
+  \end{subfigure}
+
+\end{figure}
 \end{center}
 }
 
 \frame{\frametitle{Evolución - Burndown Chart}
+
+
 \begin{center}
 	\begin{figure}
-		\centering
-			\subfloat{
-			\includegraphics[width=0.5\textwidth]{./imatges/S3.png}}
-			\subfloat{
-			\includegraphics[width=0.5\textwidth]{./imatges/S4.png}}
-	\end{figure}
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=1\textwidth]{./imatges/S3.png}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=1\textwidth]{./imatges/S4.png}
+  \end{subfigure}
+
+\end{figure}
 \end{center}
 }
 
